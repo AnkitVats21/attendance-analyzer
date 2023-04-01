@@ -1,33 +1,31 @@
 import styles from '@/styles/Home.module.css'
-import Example from "@/components/liveAttendanceChart";
 import MonthlyAttendanceChart from '@/components/areaChart';
 import StrengthMeasureChart from '@/components/pieChart';
-import Grid from '@mui/material/Grid';
 import { useEffect, useState } from 'react';
-import VenueAttendance from '@/components/venueAttendance';
+import BarChart from '@/components/barChart';
 
 
-export default function Dashboard() {
+export default function Dashboard({ data }) {
     const [showChild, setShowChild] = useState(false)
 
-  useEffect(() => {
-    setShowChild(true)
-  }, [])
+    useEffect(() => {
+        setShowChild(true)
+    }, [])
+
 
     return showChild && <>
         <main className={styles.main}>
-            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                <Grid item xs={8}>
-                    <Example />
-                    <MonthlyAttendanceChart />
-                </Grid>
-                <Grid item xs={4}>
-                    <StrengthMeasureChart />
-                    <VenueAttendance/>
-                </Grid>
-                
-            </Grid>
-        </main>
+            <MonthlyAttendanceChart />
+            <StrengthMeasureChart />
+            <BarChart />
+
+            <button onClick={async () => {
+                const data = await fetch('api/hello')
+                const jd = await data.json();
+                console.log(jd)
+            }}>fetch api</button>
+        </main >
 
     </>
 }
+

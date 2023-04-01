@@ -14,14 +14,21 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.8",
     "@next/font": "13.1.6",
+    "@prisma/client": "^4.10.1",
     "dateformat": "^5.0.3",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
+    "ioredis": "^5.3.1",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-calendar-heatmap": "^1.9.0",
     "react-dom": "18.2.0",
     "recharts": "^2.4.1",
-    "styled-components": "^5.3.6"
+    "socket.io-client": "^4.6.0",
+    "styled-components": "^5.3.6",
+    "swr": "^2.0.3"
+  },
+  "devDependencies": {
+    "prisma": "^4.10.1"
   }
 }

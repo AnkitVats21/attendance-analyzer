@@ -17,7 +17,7 @@ import Link from 'next/link';
 
 
 const pages = ['classes',
-  // 'timetable',
+  'venue',
   'calender'];
 const settings = ['Profile', 'Logout'];
 
@@ -123,7 +123,7 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link href={page} passHref legacyBehavior>
+              <Link href={'/'+page} passHref legacyBehavior>
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}

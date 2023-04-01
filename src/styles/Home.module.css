@@ -277,3 +277,12 @@
   }
 }
 
+.outerGrid{
+  padding: 5px;
+  border: 10px solid #0000001a ;
+}
+
+.innerGrid{
+  padding: 5px;
+  border:2px solid black;
+}
